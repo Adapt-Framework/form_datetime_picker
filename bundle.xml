@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adapt_framework>
+  <bundle>
+    <label>Form Date and Time controls</label>
+    <name>form_datatime_picker</name>
+    <type>extension</type>
+    <version>1.0.0</version>
+    <namespace>/extensions/form_datetime_picker</namespace>
+    <description />
+    <license>MIT</license>
+    <copyright>2015 Adapt Framework</copyright>
+    <depends_on>
+      <bundle>bootstrap_datetimepicker</bundle>
+      <bundle>jquery</bundle>
+    </depends_on>
+  </bundle>
+</adapt_framework>
