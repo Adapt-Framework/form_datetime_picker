@@ -11,7 +11,7 @@
             /*
              * Add the pickers
              */
-            $('.view.field_datetime_picker').each(
+            $('.view.field-datetime-picker input').each(
                 function(){
                     var $this = $(this);
                     var pattern = '';
@@ -19,7 +19,7 @@
                     if ($this.attr('data-formatter') == 'locales_datetime') {
                         pattern = $('meta.setting[name="locales.default_datetime_pattern"]').attr('content');
                     }else if ($this.attr('data-datetime-format') != ''){
-                        pattern = $this.attr('data-datatime-format');
+                        pattern = $this.attr('data-datetime-format');
                     }
                     
                     if (pattern != ''){
@@ -33,7 +33,7 @@
                 }
             );
             
-            $('.view.field_time_picker').each(
+            $('.view.field-time-picker input').each(
                 function(){
                     var $this = $(this);
                     var pattern = '';
@@ -41,7 +41,7 @@
                     if ($this.attr('data-formatter') == 'locales_time') {
                         pattern = $('meta.setting[name="locales.default_time_pattern"]').attr('content');
                     }else if ($this.attr('data-datetime-format') != ''){
-                        pattern = $this.attr('data-datatime-format');
+                        pattern = $this.attr('data-datetime-format');
                     }
                     
                     if (pattern != ''){
@@ -55,7 +55,7 @@
                 }
             );
             
-            $('.view.field_date_picker').each(
+            $('.view.field-date-picker input').each(
                 function(){
                     var $this = $(this);
                     var pattern = '';
@@ -63,7 +63,7 @@
                     if ($this.attr('data-formatter') == 'locales_date') {
                         pattern = $('meta.setting[name="locales.default_date_pattern"]').attr('content');
                     }else if ($this.attr('data-datetime-format') != ''){
-                        pattern = $this.attr('data-datatime-format');
+                        pattern = $this.attr('data-datetime-format');
                     }
                     
                     if (pattern != ''){
@@ -71,7 +71,8 @@
                     }
                     
                     $this.datetimepicker({
-                        format: pattern
+                        format: pattern,
+                        locale: 'en-gb'
                     });
                     
                 }

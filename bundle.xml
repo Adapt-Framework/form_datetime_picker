@@ -2,7 +2,7 @@
 <adapt_framework>
   <bundle>
     <label>Form Date and Time controls</label>
-    <name>form_datatime_picker</name>
+    <name>form_datetime_picker</name>
     <type>extension</type>
     <version>1.0.0</version>
     <namespace>/extensions/form_datetime_picker</namespace>
@@ -13,5 +13,6 @@
       <bundle>bootstrap_datetimepicker</bundle>
       <bundle>jquery</bundle>
     </depends_on>
+    <schema_installed>Yes</schema_installed>
   </bundle>
 </adapt_framework>
