@@ -13,6 +13,5 @@
       <bundle>bootstrap_datetimepicker</bundle>
       <bundle>jquery</bundle>
     </depends_on>
-    <schema_installed>Yes</schema_installed>
   </bundle>
 </adapt_framework>
