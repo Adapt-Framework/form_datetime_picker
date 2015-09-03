@@ -12,6 +12,7 @@
     <depends_on>
       <bundle>bootstrap_datetimepicker</bundle>
       <bundle>jquery</bundle>
+      <bundle>forms</bundle>
     </depends_on>
   </bundle>
 </adapt_framework>
