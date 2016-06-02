@@ -81,8 +81,8 @@
             $('.view.field-dob-picker input').each(
                 function(){
                     var $this = $(this);
-                    var pattern = '';
                     
+                    var pattern = '';
                     if ($this.attr('data-formatter') == 'locales_date') {
                         pattern = $('meta.setting[name="locales.default_date_pattern"]').attr('content');
                     }else if ($this.attr('data-datetime-format') != ''){
@@ -90,6 +90,7 @@
                     }
                     
                     if (pattern != ''){
+                        console.log('Pattern: ' + pattern);
                         pattern = convert_date_format_to_moment_format(pattern);
                     }
                     
