@@ -57,7 +57,7 @@
                             // We have a range picker so we need to configure it
                             // accordingly
                             var $group = $field.parents('.view.form-page-section-group');
-                            console.log('Inputs', $group.find('input.form-datetime-picker'));
+
                             var $picker1 = $group.find('.form-datetime-picker input').first();
                             var $picker2 = $group.find('.form-datetime-picker input').last();
                             
@@ -76,14 +76,22 @@
                             $picker1.on(
                                 'dp.change',
                                 function (e) {
-                                    $picker2.data('DateTimePicker').minDate(e.date);
+                                    $(e.target).first().blur();
+                                    var minPicker = $picker2.data('DateTimePicker');
+                                    if(minPicker){
+                                        minPicker.minDate(e.date);
+                                    }
                                 }
                             );
                             
                             $picker2.on(
                                 'dp.change',
                                 function (e) {
-                                    $picker1.data('DateTimePicker').maxDate(e.date);
+                                    $(e.target).first().blur();
+                                    var maxPicker = $picker1.data('DateTimePicker');
+                                    if(maxPicker){
+                                        maxPicker.maxDate(e.date);
+                                    }
                                 }
                             );
                             
@@ -106,7 +114,7 @@
             
             //window.testFoo = testFoo;
             function testFoo() {
-                console.log('we have been called');
+                //console.log('we have been called');
                 
                 /*
                  * What format should our dates and times be?
@@ -118,6 +126,7 @@
                  */                                
                 $('.view.field-datetime-picker input').each(
                     function(){
+
                         var $this = $(this);
                         var pattern = '';
                         
@@ -195,7 +204,7 @@
                         }
                         
                         if (pattern != ''){
-                            console.log('Pattern: ' + pattern);
+                            //console.log('Pattern: ' + pattern);
                             pattern = convert_date_format_to_moment_format(pattern);
                         }
                         
@@ -232,21 +241,21 @@
                                 locale: 'en-gb',
                                 useCurrent: false
                             });
-                            
+
                             $('#' + first_picker_id).on(
                                 'dp.change',
                                 function (event){
                                     $('#' + second_picker_id).data("DateTimePicker").minDate(event.date);
                                 }
                             );
-                            
+
                             $('#' + second_picker_id).on(
                                 'dp.change',
                                 function (event){
                                     $('#' + first_picker_id).data("DateTimePicker").maxDate(event.date);
                                 }
                             );
-                        } 
+                        }
                     }
                 );
                 
