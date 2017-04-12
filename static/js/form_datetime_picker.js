@@ -65,7 +65,13 @@
                                 // We need to configure this one before the second one
                                 // Check the type of picker we have
                             }
-                            
+
+                            $picker1.datetimepicker({
+                                format: convert_date_format_to_moment_format(formatter),
+                                locale: 'en-gb', // @TODO: Pull from meta setting
+                                useCurrent: false
+                            });
+
                             $picker2.datetimepicker({
                                 format: convert_date_format_to_moment_format(formatter),
                                 locale: 'en-gb', // @TODO: Pull from meta setting
