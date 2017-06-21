@@ -4,7 +4,7 @@
     <label>Adapt Form Date and Time controls</label>
     <name>form_datetime_picker</name>
     <type>extension</type>
-    <version>1.0.0</version>
+    <version>0.8.0</version>
     <namespace>\adapt\forms\datetime_picker</namespace>
     <version_status>release</version_status>
     <availability>public</availability>
@@ -14,7 +14,7 @@
     <depends_on>
       <bundle>
         <name>bootstrap_datetimepicker</name>
-        <version>4.14</version>
+        <version>1.0</version>
       </bundle>
       <bundle>
         <name>jquery</name>
